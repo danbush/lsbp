@@ -1,0 +1,28 @@
+<script src="/scripts/interact.js"></script>
+<script src="/scripts/scripts.js"></script>
+{{!-- <h1>The murder room is {{Rooms.murderRoom}}</h1>
+<h1>The murder pie is {{Pies.murderPie}}</h1>
+<h1>The murderer is {{Spies.murderSpy}}</h1> --}}
+{{#each murderInfo}}
+<h2>pie number is {{this.pie}} and the id is {{this._id}}</h2>
+{{/each}}
+<a href="/new-data">New Data</a>
+<section class="play-field" id="play-field">
+  <div class="play-field-internal draggable" id="play-field-internal">
+    {{#each Rooms.roomDeck_full}}
+    <div class="room {{@key}}" style="background-image:url({{this.img}});width:500px;height:500px;">
+      {{this.name}}
+    </div>
+    {{/each}}  
+  </div>
+</section>
+{{!-- <section class="delete">
+    <h3>Delete Data</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="id">ID</label>
+            <input type="text" id="id" name="id">
+        </div>
+        <button type="submit">DELETE</button>
+    </form>
+</section> --}}

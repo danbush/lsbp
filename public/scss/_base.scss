@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding:0;
+  border: 0;
+  background-color: red;
+}
+.play-field {
+  margin: 0;
+  padding: 0 0 0 100px;
+  background-color: pink;
+  height: 1000px;
+  width: calc(100% - 100px);
+  overflow: hidden;
+  .play-field-internal {
+    background-color: purple;
+    width: 2015px;
+    height: 1000px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+  }
+  div {
+    margin:0;
+    display: inline-block;
+  }
+}
