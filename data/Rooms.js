@@ -3,14 +3,14 @@ var randomInt = require('random-int');
 var deleteKey = require('key-del');
 
 // Build each room
-var room1 = {name:"room 1", img:"http://placehold.it/500x500/222222"};
-var room2 = {name:"room 2", img:"http://placehold.it/500x500"};
-var room3 = {name:"room 3", img:"http://placehold.it/500x500/880000"};
-var room4 = {name:"room 4", img:"http://placehold.it/500x500/008800"};
-var room5 = {name:"room 5", img:"http://placehold.it/500x500/000088"};
-var room6 = {name:"room 6", img:"http://placehold.it/500x500/ee7700"};
-var room7 = {name:"room 7", img:"http://placehold.it/500x500/ff5511"};
-var room8 = {name:"room 8", img:"http://placehold.it/500x500/228822"};
+var room1 = {name:"room 1", img:"/images/area_lobby.png"};
+var room2 = {name:"room 2", img:"/images/area_lounge.png"};
+var room3 = {name:"room 3", img:"/images/area_exhibit_hall.png"};
+var room4 = {name:"room 4", img:"/images/area_kitchen.png"};
+var room5 = {name:"room 5", img:"/images/area_theatre.png"};
+var room6 = {name:"room 6", img:"/images/area_training_grounds.png"};
+var room7 = {name:"room 7", img:"/images/area_conference_room.png"};
+var room8 = {name:"room 8", img:"/images/area_lounge.png"};
 
 // Build the full room list
 var roomDeck = {room1,room2,room3,room4,room5,room6,room7,room8};
