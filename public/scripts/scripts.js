@@ -1,7 +1,6 @@
-// play audio
-// window.onload = function() {
-//     document.getElementById("background-music").play();
-// }
+// Socket Stuff
+// Make connection
+var socket = io.connect();
 
 //interact js
 // target elements with the "draggable" class
