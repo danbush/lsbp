@@ -1,3 +1,8 @@
+// play audio
+// window.onload = function() {
+//     document.getElementById("background-music").play();
+// }
+
 //interact js
 // target elements with the "draggable" class
   interact('.draggable')
@@ -38,9 +43,9 @@
         if (x < -1000) {
           x = -990;
         } else if (x > window.innerWidth - 700) {
-          var windowWidth = window.innerWidth
-          x = 690;
-          console.log(window.innerWidth);
+          var windowWidth = window.innerWidth;
+          x = x-100;
+          console.log("window inner width is " + window.innerWidth);
         }
     // translate the element
     target.style.webkitTransform =
@@ -90,10 +95,17 @@ fsDocButton.addEventListener('click', function(e) {
   if(windowIsFull) {
     e.preventDefault();
     exitFullscreen();
+    document.getElementById("background-music").pause();
+    document.getElementById("background-music").currentTime = 0;
+    document.getElementById("pre-post-overlay").className = "pre-play-overlay";
+    document.getElementById("fs-doc-button").innerHTML = "PLAY";
     windowIsFull = false;
   } else {
     e.preventDefault();
     requestFullscreen(document.documentElement);
+    document.getElementById("background-music").play();
+    document.getElementById("pre-post-overlay").className = "post-play-overlay";
+    document.getElementById("fs-doc-button").innerHTML = "STOP";
     windowIsFull = true;
   }
   console.log("full screen is " + windowIsFull);
