@@ -84,13 +84,13 @@ html, body {
 
 /* End Play Field */
 /* Start Pre-Post Overlay */
-section.pre-play-overlay {
+/*section.pre-play-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, .6);
   position: absolute;
-  z-index: 500; }
-  section.pre-play-overlay button.play-button {
+  z-index: 500;
+  button.play-button {
     width: 200px;
     height: 100px;
     font-size: 18px;
@@ -100,15 +100,16 @@ section.pre-play-overlay {
     top: -200px;
     right: 0;
     bottom: 0;
-    left: 0; }
-
+    left: 0;
+  }
+}
 section.post-play-overlay {
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, .0 );
   position: absolute;
-  z-index: 0; }
-  section.post-play-overlay button.play-button {
+  z-index: 0;
+  button.play-button {
     width: 200px;
     height: 100px;
     font-size: 18px;
@@ -118,6 +119,48 @@ section.post-play-overlay {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0; }
-
+    left: 0;
+  }
+}*/
 /* End Pre-Post Overlay */
+/* Start Chat */
+#chat {
+  width: 300px;
+  height: 235px;
+  background-color: #ffffff; }
+  #chat #chat-window {
+    height: 235px;
+    overflow: auto;
+    background: #f9f9f9; }
+  #chat #chat-output {
+    display: block;
+    height: 120px; }
+  #chat #chat-output p {
+    padding: 14px 0px;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555; }
+  #chat #feedback p {
+    color: #aaa;
+    padding: 14px 0px;
+    margin: 0 20px; }
+  #chat #chat-output strong {
+    color: #575ed8; }
+  #chat button#chat-send {
+    width: 100%;
+    padding: 12px 0;
+    color: #ffffff;
+    background: goldenrod; }
+  #chat input {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #eee;
+    border: 0;
+    display: block;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-family: Nunito;
+    font-size: 16px; }
+
+/* End Chat */
