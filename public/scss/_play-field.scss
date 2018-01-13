@@ -11,8 +11,7 @@
     background-color: purple;
     width: $field-width;
     height: $field-height;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow: hidden;
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate(100px, 0px);
     transform: translate(100px, 0px);
