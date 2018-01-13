@@ -3,11 +3,14 @@
 * MongoDB
 * Node.js
 
-## To install on ubuntu or windows 10 bash:
+## To install node on ubuntu or windows 10 bash:
 ~~~~
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 apt-get install -y nodejs
 ~~~~
+
+## To install Mongo DB
+[Go here](https://www.mongodb.com/download-center?jmp=nav#community), and follow the instructions.
 
 Don't use npm update (at least for now) because it currently needs an older version of mongoose.
 
