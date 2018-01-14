@@ -54,6 +54,90 @@ html, body {
   border: 0;
   background-color: #A6A6A6; }
 
+.front-logo {
+  width: 366px;
+  height: 262px;
+  background: url("/images/lsbp-logo.png") no-repeat;
+  background-size: 366px;
+  display: block;
+  margin: 150px auto 0 auto; }
+
+section#game-setup {
+  width: 509px;
+  height: 415px;
+  background: #FFFFF7;
+  border: 8px solid #545454;
+  display: block;
+  position: relative;
+  margin: 0 auto; }
+  section#game-setup h2 {
+    margin-top: 20px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0.0625em;
+    color: #000000; }
+  section#game-setup form input, section#game-setup form label {
+    display: block; }
+  section#game-setup form label {
+    margin: 20px 0 4px 73px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 20px;
+    text-align: left;
+    letter-spacing: 0.0625em;
+    color: #000000; }
+  section#game-setup form input {
+    width: 364px;
+    height: 69px;
+    margin: 0 auto;
+    background: #545454;
+    border: 8px solid #B8B8B8;
+    box-sizing: border-box;
+    font-family: Boogaloo;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.0625em;
+    color: #FFFFF7; }
+  section#game-setup button#go {
+    background: url("data:image/svg+xml,%3Csvg width='311' height='129' viewBox='0 0 311 129' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3ERectangle 2%3C/title%3E%3Cdesc%3ECreated using Figma%3C/desc%3E%3Cg id='Canvas' transform='translate%28152 -173%29'%3E%3Cg id='Rectangle 2'%3E%3Cuse xlink:href='%23path0_fill' transform='translate%28-161 172%29' fill='%23FF7373'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cpath id='path0_fill' d='M 18.9265 33.8747C 22.6063 14.4078 39.9818 0.567504 59.7786 1.33428L 281.548 9.92392C 303.021 10.7556 320 28.4049 320 49.894L 320 70.5597C 320 91.3649 304.051 108.696 283.317 110.422L 52.3849 129.64C 26.0412 131.833 4.8536 108.323 9.76357 82.3487L 18.9265 33.8747Z'/%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat;
+    border: 0;
+    cursor: pointer;
+    border-radius: 40px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 30px;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: -0.0075em;
+    color: #FFFFF7;
+    width: 320px;
+    height: 134px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 20px;
+    padding: 0 0 15px 0;
+    outline: none;
+    transition: transform .21s ease-in-out; }
+    section#game-setup button#go:hover {
+      transform: rotate(2deg) scale(0.99, 0.99); }
+    section#game-setup button#go:active {
+      transform: rotate(3deg) scale(0.95, 0.95); }
+
 /* Start Play Field */
 .play-field {
   margin: 0;
@@ -83,13 +167,13 @@ html, body {
 
 /* End Play Field */
 /* Start Pre-Post Overlay */
-/*section.pre-play-overlay {
+section.pre-play-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .6);
+  background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  z-index: 500;
-  button.play-button {
+  z-index: 500; }
+  section.pre-play-overlay button.play-button {
     width: 200px;
     height: 100px;
     font-size: 18px;
@@ -99,16 +183,15 @@ html, body {
     top: -200px;
     right: 0;
     bottom: 0;
-    left: 0;
-  }
-}
+    left: 0; }
+
 section.post-play-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .0 );
+  background-color: transparent;
   position: absolute;
-  z-index: 0;
-  button.play-button {
+  z-index: 0; }
+  section.post-play-overlay button.play-button {
     width: 200px;
     height: 100px;
     font-size: 18px;
@@ -118,9 +201,8 @@ section.post-play-overlay {
     top: 0;
     right: 0;
     bottom: 0;
-    left: 0;
-  }
-}*/
+    left: 0; }
+
 /* End Pre-Post Overlay */
 /* Start Chat */
 #chat {
