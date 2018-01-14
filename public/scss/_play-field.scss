@@ -1,3 +1,10 @@
+/* ========================== */
+$card-size: 350px;
+$card-padding: 30px;
+$field-width: ($card-size * 4 + ($card-padding * 5));
+$field-height: ($card-size * 2 + ($card-padding * 3));
+/* ========================== */
+
 /* Start Play Field */
 .play-field {
   margin: 0;
@@ -8,7 +15,7 @@
   overflow: hidden;
   .play-field-internal {
     margin: auto;
-    background-color: purple;
+    background-color: $background-color;
     width: $field-width;
     height: $field-height;
     overflow: hidden;
@@ -16,6 +23,22 @@
     -webkit-transform: translate(100px, 0px);
     transform: translate(100px, 0px);
     cursor: ew-resize;
+    .room {
+      margin-top: $card-padding;
+      margin-right: $card-padding;
+      &:first-child, &:nth-child(5) {
+        margin-left: $card-padding;
+      }
+      &:nth-child(-n+4) {
+        margin-bottom: 0;
+      }
+      &:nth-child(-n+4) {
+        margin-bottom: 0;
+      }
+      &:nth-last-child(-n+4) {
+        margin-bottom: $card-padding;
+      }
+    }
   }
   div {
     margin:0;

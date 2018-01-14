@@ -1,3 +1,17 @@
+// Game UI
+// Notepad
+var notepad = document.getElementById('notepad-closed');
+
+notepad.addEventListener('click', function() {
+  if(notepad.id === 'notepad-closed') {
+    notepad.id = 'notepad-open';
+
+  } else {
+    notepad.id = 'notepad-closed';
+  }
+  console.log(notepad.id);
+});
+
 // Socket Stuff
 // Make connection
 var socket = io.connect();
