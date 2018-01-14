@@ -1,5 +1,5 @@
 /* Start Game UI */
-#notepad {
+.notepad {
   display:block;
   position: absolute;
   bottom: 0;
@@ -8,9 +8,6 @@
   background: #FFFFF7;
   border: 8px solid #545454;
   box-sizing: border-box;
-  
-  transition: all .21s ease-in-out;
-  transform: translateX(-263px);
 
   tr, td {
     border: 1px solid red;
@@ -20,7 +17,7 @@
     height: 50px;
     width: 50px;
   }
-  #notepad-closed {
+  #notepad-tab {
     width: 62px;
     height: 789px;
     left: 0px;
@@ -28,7 +25,25 @@
 
     background: #545454;
     cursor: pointer;
+  }
+  td.notepad-label {
+    height: 65px;
+    font-family: Boogaloo;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 60px;
+    text-align: left;
+    letter-spacing: 0.0625em;
 
+    color: #000000;
+    background: #D9D9D0;
+  }
+}
+#notepad {
+  transition: all .21s ease-in-out;
+  transform: translateX(-263px);
+  #notepad-tab {
     div.arrow {
       width: 35px;
       height: 80px;
@@ -44,35 +59,9 @@
   }
 }
 #notepad-open {
-  display:block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  background: #FFFFF7;
-  border: 8px solid #545454;
-  box-sizing: border-box;
-
   transition: all .21s ease-in-out;
   transform: translateX(0);
-
-  tr, td {
-    border: 1px solid red;
-    vertical-align: middle;
-  }
-  tr:first-child td {
-    height: 50px;
-    width: 50px;
-  }
-  #notepad-closed {
-    width: 62px;
-    height: 789px;
-    left: 0px;
-    bottom: 0;
-
-    background: #545454;
-    cursor: pointer;
-
+  #notepad-tab {
     div.arrow {
       width: 35px;
       height: 80px;
