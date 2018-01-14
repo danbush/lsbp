@@ -21,7 +21,7 @@ section.pre-play-overlay {
 section.post-play-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, .0 );
+  display:none;
   position: absolute;
   z-index: 0;
   button.play-button {
