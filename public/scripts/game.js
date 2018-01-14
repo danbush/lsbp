@@ -1,8 +1,9 @@
 // Game UI
 // Notepad
 var notepad = document.getElementById('notepad');
+var notepadTab = document.getElementById('notepad-tab')
 
-notepad.addEventListener('click', function() {
+notepadTab.addEventListener('click', function() {
   if(notepad.id === 'notepad') {
     notepad.id = 'notepad-open';
 

@@ -149,20 +149,34 @@ section#game-setup {
   border: 8px solid #545454;
   box-sizing: border-box; }
   .notepad tr, .notepad td {
-    border: 1px solid red;
     vertical-align: middle; }
-  .notepad tr:first-child td {
-    height: 50px;
-    width: 50px; }
+  .notepad tr:nth-child(n+3) td {
+    border-bottom: 6px solid #D9D9D0; }
+  .notepad tr:nth-last-child(1) td {
+    border-bottom: 0; }
+  .notepad td {
+    height: 40px;
+    padding: 10px;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.0625em;
+    text-transform: uppercase;
+    color: #000000; }
+    .notepad td:first-child {
+      width: 220px; }
+    .notepad td:nth-child(n+2):nth-child(-n+5) {
+      border-left: 6px solid #D9D9D0; }
   .notepad #notepad-tab {
-    width: 62px;
-    height: 789px;
+    width: 52px;
     left: 0px;
     bottom: 0;
     background: #545454;
     cursor: pointer; }
   .notepad td.notepad-label {
-    height: 65px;
     font-family: Boogaloo;
     font-style: normal;
     font-weight: normal;
@@ -175,7 +189,7 @@ section#game-setup {
 
 #notepad {
   transition: all .21s ease-in-out;
-  transform: translateX(-263px); }
+  transform: translateX(-552px); }
   #notepad #notepad-tab div.arrow {
     width: 35px;
     height: 80px;
