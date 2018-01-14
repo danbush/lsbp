@@ -140,47 +140,70 @@ section#game-setup {
       transform: rotate(3deg) scale(0.95, 0.95); }
 
 /* Start Game UI */
-section#notepad {
+#notepad {
   display: block;
   position: absolute;
   bottom: 0;
-  left: 0; }
-  section#notepad #notepad-closed {
-    position: absolute;
-    display: flex;
+  left: 0;
+  background: #FFFFF7;
+  border: 8px solid #545454;
+  box-sizing: border-box;
+  transition: all .21s ease-in-out;
+  transform: translateX(-263px); }
+  #notepad tr, #notepad td {
+    border: 1px solid red;
+    vertical-align: middle; }
+  #notepad tr:first-child td {
+    height: 50px;
+    width: 50px; }
+  #notepad #notepad-closed {
     width: 62px;
     height: 789px;
     left: 0px;
     bottom: 0;
     background: #545454;
-    cursor: pointer;
-    transition: all .21s ease-in-out; }
-    section#notepad #notepad-closed div.arrow {
+    cursor: pointer; }
+    #notepad #notepad-closed div.arrow {
       width: 35px;
       height: 80px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: auto;
+      transition: background .31s ease-in-out;
       background: url("data:image/svg+xml,%3Csvg width='36' height='81' viewBox='0 0 36 81' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EVector%3C/title%3E%3Cdesc%3ECreated using Figma%3C/desc%3E%3Cg id='Canvas' transform='translate%28708 -76%29'%3E%3Cg id='Vector'%3E%3Cuse xlink:href='%23path0_stroke' transform='translate%28-704 80%29' fill='%23FFFFF7'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cpath id='path0_stroke' d='M 2.77701 -2.13031C 1.60047 -3.66401 -0.596609 -3.95355 -2.13031 -2.77701C -3.66401 -1.60047 -3.95355 0.596609 -2.77701 2.13031L 2.77701 -2.13031ZM 28 36.5L 30.777 38.6303C 31.741 37.3737 31.741 35.6263 30.777 34.3697L 28 36.5ZM -2.77701 70.8697C -3.95355 72.4034 -3.66401 74.6005 -2.13031 75.777C -0.596609 76.9535 1.60047 76.664 2.77701 75.1303L -2.77701 70.8697ZM -2.77701 2.13031L 25.223 38.6303L 30.777 34.3697L 2.77701 -2.13031L -2.77701 2.13031ZM 25.223 34.3697L -2.77701 70.8697L 2.77701 75.1303L 30.777 38.6303L 25.223 34.3697Z'/%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat; }
-  section#notepad #notepad-open {
-    position: absolute;
-    display: flex;
+
+#notepad-open {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #FFFFF7;
+  border: 8px solid #545454;
+  box-sizing: border-box;
+  transition: all .21s ease-in-out;
+  transform: translateX(0); }
+  #notepad-open tr, #notepad-open td {
+    border: 1px solid red;
+    vertical-align: middle; }
+  #notepad-open tr:first-child td {
+    height: 50px;
+    width: 50px; }
+  #notepad-open #notepad-closed {
     width: 62px;
     height: 789px;
     left: 0px;
     bottom: 0;
-    background: purple;
-    cursor: pointer;
-    transition: all .21s ease-in-out;
-    transform: translateX(200px); }
-    section#notepad #notepad-open div.arrow {
+    background: #545454;
+    cursor: pointer; }
+    #notepad-open #notepad-closed div.arrow {
       width: 35px;
       height: 80px;
       display: flex;
       justify-content: center;
       align-items: center;
       margin: auto;
+      transition: background .31s ease-in-out;
       background: url("data:image/svg+xml,%3Csvg width='36' height='81' viewBox='0 0 36 81' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EVector%3C/title%3E%3Cdesc%3ECreated using Figma%3C/desc%3E%3Cg id='Canvas' transform='translate%28133 -1347%29'%3E%3Cg id='Vector'%3E%3Cuse xlink:href='%23path0_stroke' transform='matrix%28-1 1.22465e-16 -1.22465e-16 -1 -101 1424%29' fill='%23FFFFF7'/%3E%3C/g%3E%3C/g%3E%3Cdefs%3E%3Cpath id='path0_stroke' d='M 2.77701 -2.13031C 1.60047 -3.66401 -0.596609 -3.95355 -2.13031 -2.77701C -3.66401 -1.60047 -3.95355 0.596609 -2.77701 2.13031L 2.77701 -2.13031ZM 28 36.5L 30.777 38.6303C 31.741 37.3737 31.741 35.6263 30.777 34.3697L 28 36.5ZM -2.77701 70.8697C -3.95355 72.4034 -3.66401 74.6005 -2.13031 75.777C -0.596609 76.9535 1.60047 76.664 2.77701 75.1303L -2.77701 70.8697ZM -2.77701 2.13031L 25.223 38.6303L 30.777 34.3697L 2.77701 -2.13031L -2.77701 2.13031ZM 25.223 34.3697L -2.77701 70.8697L 2.77701 75.1303L 30.777 38.6303L 25.223 34.3697Z'/%3E%3C/defs%3E%3C/svg%3E%0A") no-repeat; }
 
 /* End Game UI */
