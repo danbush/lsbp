@@ -58,7 +58,7 @@ router.get('/new-data', function(req, res, next) {
   })
   MurderData.find()
     .then(function(doc){
-      res.render('index', {murderInfo: doc});
+      res.render('game', {murderInfo: doc});
     });
 });
 
