@@ -3,6 +3,10 @@
   width: 300px;
   height: 235px;
   background-color: #ffffff;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
   #chat-window {
     height: 235px;
     overflow: auto;

@@ -1,3 +1,17 @@
+// mute switch
+var audio = document.getElementById("background-music");
+var mute = document.getElementById("mute");
+
+mute.addEventListener('click', function () {
+    if (audio.muted) {
+      audio.muted = false;
+      mute.innerHTML = '<img src="images/mute-no.svg" alt="mute">';
+    } else {
+      audio.muted = true;
+      mute.innerHTML = '<img src="images/mute.svg" alt="unmute">';
+    }
+}, false);
+
 // Game UI
 // Notepad
 var notepad = document.getElementById('notepad');

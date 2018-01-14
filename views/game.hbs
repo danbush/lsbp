@@ -1,7 +1,7 @@
 <script src="/scripts/interact.js"></script>
-{{!-- <h1>The murder room is {{Rooms.murderRoom}}</h1>
+<h1>The murder room is {{Rooms.murderRoom}}</h1>
 <h1>The murder pie is {{Pies.murderPie}}</h1>
-<h1>The murderer is {{Spies.murderSpy}}</h1> --}}
+<h1>The murderer is {{Spies.murderSpy}}</h1>
 {{#each murderInfo}}
 <h2>pie number is {{this.pie}} and the id is {{this._id}}</h2>
 {{/each}}
@@ -22,7 +22,7 @@
   <div class="notepad-scroller">
     <table id="notepad-table" class="notepad-table">
       <tr>
-        <td>--</td>
+        <td></td>
         <td><img src="{{Spies.spy1.icon}}" alt="{{Spies.spy1.name}}"></td>
         <td><img src="{{Spies.spy2.icon}}" alt="{{Spies.spy2.name}}"></td>
         <td><img src="{{Spies.spy3.icon}}" alt="{{Spies.spy3.name}}"></td>
@@ -132,6 +132,8 @@
         <button type="submit">DELETE</button>
     </form>
 </section> --}}
+<div id="mute"><img src="images/mute-no.svg" alt="mute"></div>
+
 <audio id="background-music" loop>
   <source src="audio/Professor_Umlaut.mp3" type="audio/mpeg">
 Your browser does not support the audio element.
