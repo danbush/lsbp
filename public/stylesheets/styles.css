@@ -148,6 +148,18 @@ section#game-setup {
   background: #FFFFF7;
   border: 8px solid #545454;
   box-sizing: border-box; }
+  .notepad .notepad-scroller {
+    max-height: 780px;
+    overflow-y: scroll; }
+  .notepad #notepad-tab {
+    display: flex;
+    position: absolute;
+    height: 796px;
+    width: 65px;
+    left: 544px;
+    bottom: -8px;
+    background: #545454;
+    cursor: pointer; }
   .notepad tr, .notepad td {
     vertical-align: middle; }
   .notepad tr:nth-child(n+3) td {
@@ -170,12 +182,6 @@ section#game-setup {
       width: 220px; }
     .notepad td:nth-child(n+2):nth-child(-n+5) {
       border-left: 6px solid #D9D9D0; }
-  .notepad #notepad-tab {
-    width: 52px;
-    left: 0px;
-    bottom: 0;
-    background: #545454;
-    cursor: pointer; }
   .notepad td.notepad-label {
     font-family: Boogaloo;
     font-style: normal;

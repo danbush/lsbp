@@ -9,6 +9,23 @@
   border: 8px solid #545454;
   box-sizing: border-box;
 
+  .notepad-scroller {
+    max-height: 780px;
+    overflow-y: scroll;
+  }
+  
+  #notepad-tab {
+    display: flex;
+    position: absolute;
+    height: 796px;
+    width: 65px;
+    left: 544px;
+    bottom: -8px;
+
+    background: #545454;
+    cursor: pointer;
+  }
+
   tr, td {
     vertical-align: middle;
   }
@@ -41,14 +58,6 @@
     &:nth-child(n+2):nth-child(-n+5) {
       border-left: 6px solid #D9D9D0;
     }
-  }
-  #notepad-tab {
-    width: 52px;
-    left: 0px;
-    bottom: 0;
-
-    background: #545454;
-    cursor: pointer;
   }
   td.notepad-label {
     font-family: Boogaloo;
