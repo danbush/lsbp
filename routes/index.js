@@ -35,6 +35,18 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
+router.get('/wait', function(req, res, next) {
+  res.render('wait');
+});
+
+router.get('/choose', function(req, res, next) {
+  res.render('choose');
+});
+
+router.get('/game', function(req, res, next) {
+  res.render('game');
+});
+
 router.get('/new-data', function(req, res, next) {
   var pieNumber = randomInt(1,8).toString();
   MurderData.findById(data._id, function(err, doc) {
