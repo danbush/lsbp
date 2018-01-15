@@ -22,7 +22,15 @@ $field-height: ($card-size * 2 + ($card-padding * 3));
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate(100px, 0px);
     transform: translate(100px, 0px);
-    cursor: ew-resize;
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    &:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing;
+    }
     .room {
       margin-top: $card-padding;
       margin-right: $card-padding;

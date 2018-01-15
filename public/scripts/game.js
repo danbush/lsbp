@@ -1,15 +1,34 @@
+// testing going to a square
+var kitchenButton = document.getElementById("kitchen-button");
+var kitchenRoom = document.getElementById("room4");
+var playField = document.getElementById("play-field-internal");
+kitchenRoom.addEventListener('dblclick', function () {
+  var dataX = playField.getAttribute('data-x');
+  var zoomKitchen = "transform: translate(-1350px, 350px) scale(1.8);"
+  if (playField.style.cssText === zoomKitchen) {
+    playField.style.cssText = "transform: translate(" + dataX + "px);"
+  } else {
+    playField.style.cssText = zoomKitchen;
+  } 
+}, false);
+
+// playField.addEventListener('dblclick', function() {
+//   var dataX = playField.getAttribute('data-x');
+//   playField.style.cssText = "transform: translate(" + dataX + "px, -" + event.clientY + "px) scale(1.8);"
+// }); 
+
 // mute switch
 var audio = document.getElementById("background-music");
 var mute = document.getElementById("mute");
 
 mute.addEventListener('click', function () {
-    if (audio.muted) {
-      audio.muted = false;
-      mute.innerHTML = '<img src="images/mute-no.svg" alt="mute">';
-    } else {
-      audio.muted = true;
-      mute.innerHTML = '<img src="images/mute.svg" alt="unmute">';
-    }
+  if (audio.muted) {
+    audio.muted = false;
+    mute.innerHTML = '<img src="images/mute-no.svg" alt="mute">';
+  } else {
+    audio.muted = true;
+    mute.innerHTML = '<img src="images/mute.svg" alt="unmute">';
+  }
 }, false);
 
 // Game UI

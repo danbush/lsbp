@@ -245,7 +245,15 @@ section#game-setup {
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate(100px, 0px);
     transform: translate(100px, 0px);
-    cursor: ew-resize; }
+    cursor: move;
+    /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab; }
+    .play-field .play-field-internal:active {
+      cursor: grabbing;
+      cursor: -moz-grabbing;
+      cursor: -webkit-grabbing; }
     .play-field .play-field-internal .room {
       margin-top: 30px;
       margin-right: 30px; }
