@@ -1,3 +1,11 @@
+// Picking cards for the user
+var fullDeck = Pies.pieDeck + Rooms.roomDeck + spies.SpyDeck
+console.log(fullDeck);
+
+
+
+
+
 // testing going to a square
 var kitchenButton = document.getElementById("kitchen-button");
 var kitchenRoom = document.getElementById("room4");

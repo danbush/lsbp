@@ -20,6 +20,22 @@ MurderData.remove({ constant: false }, function (err) {
   // removed!
 });
 
+var gameDataSchema = new Schema({
+  owner: String,
+  player2: String,
+  player3: String,
+  player4: String,
+  gamename: String,
+  ready: Boolean
+}, {collection: 'user-data'});
+
+var GameData = mongoose.model('GameData', gameDataSchema);
+
+GameData.remove({ constant: false }, function (err) {
+  if (err) return handleError(err);
+  // removed!
+});
+
 var seed = {
   room: "20",
   pie: "30",
@@ -36,7 +52,15 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/wait', function(req, res, next) {
-  res.render('wait');
+  console.warn('\x1b[35m%s\x1b[35m', 'username is ' + req.query.username + " and game name is " + req.query.gamename);
+  var newGame = {
+    owner: req.query.username,
+    gamename: req.query.gamename,
+    ready: false
+  };
+  // var data = new GameData(newGame);
+  // data.save();
+  res.render('wait', {newGame: newGame});
 });
 
 router.get('/choose', function(req, res, next) {
@@ -46,6 +70,8 @@ router.get('/choose', function(req, res, next) {
 router.get('/game', function(req, res, next) {
   res.render('game');
 });
+
+
 
 router.get('/new-data', function(req, res, next) {
   var pieNumber = randomInt(1,8).toString();
