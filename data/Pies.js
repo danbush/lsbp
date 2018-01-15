@@ -3,12 +3,12 @@ var randomInt = require('random-int');
 var deleteKey = require('key-del');
 
 // Build each pie
-var pie1 = {name:"Cherry", card:"http://placehold.it/500x500/222222"};
-var pie2 = {name:"Strawberry", card:"http://placehold.it/500x500"};
-var pie3 = {name:"Blueberry", card:"http://placehold.it/500x500/880000"};
-var pie4 = {name:"Boysenberry", card:"http://placehold.it/500x500/008800"};
-var pie5 = {name:"Blackberry", card:"http://placehold.it/500x500/000088"};
-var pie6 = {name:"Bumbleberry", card:"http://placehold.it/500x500/ee7700"};
+var pie1 = {name:"Cherry", card:"http://placehold.it/500x500/222222", icon: "http://fillmurray.com/50/50"};
+var pie2 = {name:"Strawberry", card:"http://placehold.it/500x500", icon: "http://fillmurray.com/50/50"};
+var pie3 = {name:"Blueberry", card:"http://placehold.it/500x500/880000", icon: "http://fillmurray.com/50/50"};
+var pie4 = {name:"Boysenberry", card:"http://placehold.it/500x500/008800", icon: "http://fillmurray.com/50/50"};
+var pie5 = {name:"Blackberry", card:"http://placehold.it/500x500/000088", icon: "http://fillmurray.com/50/50"};
+var pie6 = {name:"Bumbleberry", card:"http://placehold.it/500x500/ee7700", icon: "http://fillmurray.com/50/50"};
 
 // Build the full pie list
 var pieDeck = {pie1,pie2,pie3,pie4,pie5,pie6};

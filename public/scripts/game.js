@@ -54,6 +54,33 @@ notepadTab.addEventListener('click', function() {
   console.log(notepad.id);
 });
 
+// Spy Picker
+var spyPicker = document.getElementById('spy-picker');
+var spyPickerTab = document.getElementById('spy-picker-circle');
+spyPickerTab.addEventListener('click', function() {
+  if(spyPicker.id === 'spy-picker') {
+    piePicker.id = 'pie-picker';
+    spyPicker.id = 'spy-picker-open';
+
+  } else {
+    spyPicker.id = 'spy-picker';
+  }
+  console.log(spyPicker.id);
+});
+// Pie Picker
+var piePicker = document.getElementById('pie-picker');
+var piePickerTab = document.getElementById('pie-picker-circle');
+piePickerTab.addEventListener('click', function() {
+  if(piePicker.id === 'pie-picker') {
+    spyPicker.id = 'spy-picker';
+    piePicker.id = 'pie-picker-open';
+
+  } else {
+    piePicker.id = 'pie-picker';
+  }
+  console.log(piePicker.id);
+});
+
 // Socket Stuff
 // Make connection
 var socket = io.connect();
@@ -177,7 +204,7 @@ console.log("full screen is " + windowIsFull);
 fsDocButton.addEventListener('click', function(e) {
   if(windowIsFull) {
     e.preventDefault();
-    exitFullscreen();
+    //exitFullscreen();
     document.getElementById("background-music").pause();
     document.getElementById("background-music").currentTime = 0;
     document.getElementById("pre-post-overlay").className = "pre-play-overlay";
@@ -185,7 +212,7 @@ fsDocButton.addEventListener('click', function(e) {
     windowIsFull = false;
   } else {
     e.preventDefault();
-    requestFullscreen(document.documentElement);
+    //requestFullscreen(document.documentElement);
     document.getElementById("background-music").play();
     document.getElementById("pre-post-overlay").className = "post-play-overlay";
     document.getElementById("fs-doc-button").innerHTML = "STOP";

@@ -146,6 +146,135 @@ section#game-setup {
       transform: rotate(3deg) scale(0.95, 0.95); }
 
 /* Start Game UI */
+/* ~~~~~~~~~~~~~~~~~~ */
+/* Spy Picker         */
+/* ~~~~~~~~~~~~~~~~~~ */
+section.spy-picker {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  top: 20px;
+  border-radius: 0px 50px 50px 0px;
+  transition: all .21s ease-in-out; }
+  section.spy-picker ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    float: left;
+    margin: 10px 10px 10px 0; }
+  section.spy-picker ul:first-child {
+    margin-left: 10px; }
+  section.spy-picker .spy-picker-tab {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50% 50% 0;
+    font-family: Boogaloo;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.0625em; }
+    section.spy-picker .spy-picker-tab .spy-picker-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer; }
+
+section#spy-picker {
+  left: -370px;
+  background-color: none;
+  border: 0;
+  transition: all .21s ease-in-out; }
+  section#spy-picker #spy-picker-tab {
+    background-color: none;
+    color: #545454; }
+    section#spy-picker #spy-picker-tab #spy-picker-circle {
+      background-color: #FFFFF7;
+      border: 4px solid #545454; }
+
+section#spy-picker-open {
+  left: 0;
+  background-color: #545454;
+  border: 6px solid #FFFFF7;
+  transition: all .21s ease-in-out; }
+  section#spy-picker-open #spy-picker-tab {
+    background-color: #545454;
+    color: #FFFFF7; }
+    section#spy-picker-open #spy-picker-tab #spy-picker-circle {
+      border: 4px solid #FFFFF7; }
+
+/* ~~~~~~~~~~~~~~~~~~ */
+/* Pie Picker         */
+/* ~~~~~~~~~~~~~~~~~~ */
+section.pie-picker {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  top: 80px;
+  border-radius: 0px 50px 50px 0px;
+  transition: all .21s ease-in-out; }
+  section.pie-picker ul li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    float: left;
+    margin: 10px 10px 10px 0; }
+  section.pie-picker ul:first-child {
+    margin-left: 10px; }
+  section.pie-picker .pie-picker-tab {
+    width: 70px;
+    height: 70px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 50% 50% 0;
+    font-family: Boogaloo;
+    font-style: normal;
+    font-weight: normal;
+    line-height: normal;
+    font-size: 40px;
+    text-align: center;
+    letter-spacing: 0.0625em; }
+    section.pie-picker .pie-picker-tab .pie-picker-circle {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer; }
+
+section#pie-picker {
+  left: -370px;
+  background-color: none;
+  border: 0;
+  transition: all .21s ease-in-out; }
+  section#pie-picker #pie-picker-tab {
+    background-color: none;
+    color: #545454; }
+    section#pie-picker #pie-picker-tab #pie-picker-circle {
+      background-color: #FFFFF7;
+      border: 4px solid #545454; }
+
+section#pie-picker-open {
+  left: 0;
+  background-color: #545454;
+  border: 6px solid #FFFFF7;
+  transition: all .21s ease-in-out; }
+  section#pie-picker-open #pie-picker-tab {
+    background-color: #545454;
+    color: #FFFFF7; }
+    section#pie-picker-open #pie-picker-tab #pie-picker-circle {
+      border: 4px solid #FFFFF7; }
+
+/* ~~~~~~~~~~~~~~~~~~ */
+/* Notepad            */
+/* ~~~~~~~~~~~~~~~~~~ */
 .notepad {
   display: block;
   position: absolute;

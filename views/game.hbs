@@ -9,6 +9,22 @@
 <section id="pre-post-overlay" class="pre-play-overlay">
   <button class="play-button" id="fs-doc-button">PLAY</button>
 </section>
+<section id="spy-picker" class="spy-picker">
+  <ul>
+    {{#each Spies.spyDeck_full}}
+    <li><img src="{{this.icon}}" alt="{{this.name}}"></li>
+    {{/each}}
+    <li class="spy-picker-tab" id="spy-picker-tab"><div id="spy-picker-circle" class="spy-picker-circle">S</div></li>
+  </ul>
+</section>
+<section id="pie-picker" class="pie-picker">
+  <ul>
+    {{#each Pies.pieDeck_full}}
+    <li><img src="{{this.icon}}" alt="{{this.name}}"></li>
+    {{/each}}
+    <li class="pie-picker-tab" id="pie-picker-tab"><div id="pie-picker-circle" class="pie-picker-circle">P</div></li>
+  </ul>
+</section>
 <section class="play-field" id="play-field">
   <div class="play-field-internal draggable" id="play-field-internal">
     {{#each Rooms.roomDeck_full}}
