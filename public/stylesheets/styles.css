@@ -162,7 +162,7 @@ section#game-setup {
     position: absolute;
     height: 796px;
     width: 65px;
-    left: 544px;
+    left: 791px;
     bottom: -8px;
     background: #545454;
     cursor: pointer; }
@@ -186,7 +186,7 @@ section#game-setup {
     color: #000000; }
     .notepad td:first-child {
       width: 220px; }
-    .notepad td:nth-child(n+2):nth-child(-n+5) {
+    .notepad td:nth-child(n+2):nth-child(-n+7) {
       border-left: 6px solid #D9D9D0; }
   .notepad td.notepad-label {
     font-family: Boogaloo;
@@ -201,7 +201,7 @@ section#game-setup {
 
 #notepad {
   transition: all .21s ease-in-out;
-  transform: translateX(-552px); }
+  transform: translateX(-799px); }
   #notepad #notepad-tab div.arrow {
     width: 35px;
     height: 80px;

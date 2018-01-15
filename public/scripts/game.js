@@ -1,6 +1,6 @@
 // Picking cards for the user
-var fullDeck = Pies.pieDeck + Rooms.roomDeck + spies.SpyDeck
-console.log(fullDeck);
+// var fullDeck = Pies.pieDeck + Rooms.roomDeck + spies.SpyDeck
+// console.log(fullDeck);
 
 
 

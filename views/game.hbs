@@ -24,89 +24,58 @@
     <table id="notepad-table" class="notepad-table">
       <tr>
         <td></td>
-        <td><img src="{{Spies.spy1.icon}}" alt="{{Spies.spy1.name}}"></td>
-        <td><img src="{{Spies.spy2.icon}}" alt="{{Spies.spy2.name}}"></td>
-        <td><img src="{{Spies.spy3.icon}}" alt="{{Spies.spy3.name}}"></td>
-        <td><img src="{{Spies.spy4.icon}}" alt="{{Spies.spy4.name}}"></td>
+        {{#each Spies.spyDeck_full}}
+        <td><img src="{{this.icon}}" alt="{{this.name}}"></td>
+        {{/each}}
       </tr>
       <tr>
-        <td class="notepad-label" colspan="5">
+        <td class="notepad-label" colspan="{{Spies.spyColSpan}}">
           Spies
         </td>
       </tr>
+      {{#each Spies.spyDeck_full}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      {{/each}}
       <tr>
-        <td>Red</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Ned</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Ted</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="notepad-label" colspan="5">
+        <td class="notepad-label" colspan="{{Spies.spyColSpan}}">
           Pies
         </td>
       </tr>
+      {{#each Pies.pieDeck_full}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      {{/each}}
       <tr>
-        <td>Red</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Ned</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Ted</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td class="notepad-label" colspan="5">
+        <td class="notepad-label" colspan="{{Spies.spyColSpan}}">
           Rooms
         </td>
       </tr>
-      <tr>
-        <td>Red</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Ned</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Ted</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
+      {{#each Rooms.roomDeck_full}}
+        <tr>
+          <td>{{this.name}}</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      {{/each}}
     </table>
   </div>
   <div id="notepad-tab">
