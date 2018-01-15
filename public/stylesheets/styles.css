@@ -199,6 +199,7 @@ section#spy-picker {
       border: 4px solid #545454; }
 
 section#spy-picker-open {
+  z-index: 15;
   left: 0;
   background-color: #545454;
   border: 6px solid #FFFFF7;
@@ -262,6 +263,7 @@ section#pie-picker {
       border: 4px solid #545454; }
 
 section#pie-picker-open {
+  z-index: 15;
   left: 0;
   background-color: #545454;
   border: 6px solid #FFFFF7;

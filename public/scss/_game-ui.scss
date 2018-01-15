@@ -61,6 +61,7 @@ section#spy-picker {
   }
 }
 section#spy-picker-open {
+  z-index: 15;
   left: 0;
 
   background-color: $dark-grey;
@@ -136,6 +137,7 @@ section#pie-picker {
   }
 }
 section#pie-picker-open {
+  z-index: 15;
   left: 0;
 
   background-color: $dark-grey;
