@@ -6,8 +6,7 @@
 
 
 
-// testing going to a square
-var kitchenButton = document.getElementById("kitchen-button");
+// Zoom to a Room
 var kitchenRoom = document.getElementById("room4");
 var playField = document.getElementById("play-field-internal");
 kitchenRoom.addEventListener('dblclick', function () {
@@ -20,10 +19,18 @@ kitchenRoom.addEventListener('dblclick', function () {
   } 
 }, false);
 
-// playField.addEventListener('dblclick', function() {
-//   var dataX = playField.getAttribute('data-x');
-//   playField.style.cssText = "transform: translate(" + dataX + "px, -" + event.clientY + "px) scale(1.8);"
-// }); 
+var loungeRoom = document.getElementById("room2");
+loungeRoom.addEventListener('dblclick', function () {
+  var dataX = playField.getAttribute('data-x');
+  var zoomLounge = "transform: translate(150px, 350px) scale(1.8);"
+  if (playField.style.cssText === zoomLounge) {
+    playField.style.cssText = "transform: translate(" + dataX + "px);"
+  } else {
+    playField.style.cssText = zoomLounge;
+  } 
+}, false);
+
+//translate(150px, 350px) scale(1.8)
 
 // mute switch
 var audio = document.getElementById("background-music");
