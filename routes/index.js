@@ -5,6 +5,9 @@ mongoose.connect('localhost:27017/test');
 var Schema = mongoose.Schema;
 var randomInt = require('random-int');
 
+var Rooms = require('../data/Rooms');
+var Pies = require('../data/Pies');
+var Spies = require('../data/Spies');
 var MurderInfo = require('../data/MurderGenerator');
 
 var murderDataSchema = new Schema({
@@ -71,10 +74,19 @@ router.get('/choose', function(req, res, next) {
 
 router.get('/game', function(req, res, next) {
   const murderTest = new MurderInfo.PickMurderThings();
+  var murderRoom = Object.freeze(murderTest.room());
+  var murderPie = Object.freeze(murderTest.pie());
+  var murderSpy = Object.freeze(murderTest.spy());
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER ROOM IS " + murderTest.room());
-  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderTest.pie());
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDERER IS " + murderTest.spy());
-  res.render('game', {MurderInfo: murderTest});
+  var pieString = murderPie;
+  console.log("BLAAAAAAAAH! ");
+  var pieTest1 = eval("Pies." + pieString + ".card");
+  var pieTest2 = eval("Pies." + pieString + ".name");
+  res.render('game', {MurderInfo: murderTest, pieTest: pieTest1, pieName: pieTest2});
 });
 
 
