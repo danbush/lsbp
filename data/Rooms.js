@@ -27,4 +27,4 @@ console.log("murder room is " + murderRoom);
 deleteKey(roomDeck,murderRoom,{copy: false});
 console.log("room deck post murder: " + JSON.stringify(roomDeck));
 // declare what can be used by the app
-module.exports = {roomDeck,room1,room2,room3,murderRoom, roomDeck_full};
+module.exports = {roomDeck,room1,room2,room3,room4,room5,room6,room7,room8,murderRoom, roomDeck_full};

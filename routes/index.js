@@ -82,11 +82,8 @@ router.get('/game', function(req, res, next) {
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDERER IS " + murderTest.spy());
-  var pieString = murderPie;
-  console.log("BLAAAAAAAAH! ");
-  var pieTest1 = eval("Pies." + pieString + ".card");
-  var pieTest2 = eval("Pies." + pieString + ".name");
-  res.render('game', {MurderInfo: murderTest, pieTest: pieTest1, pieName: pieTest2});
+  var murderPieObject = {card: eval("Pies." + murderPie + ".card"), name: eval("Pies." + murderPie + ".name")};
+  res.render('game', {MurderInfo: murderTest, murderPie: murderPieObject, pieName: pieTest2});
 });
 
 
