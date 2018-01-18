@@ -7,8 +7,8 @@ var pie1 = {name:"Cherry", card:"/images/card_cherry.png", icon: "http://fillmur
 var pie2 = {name:"Strawberry", card:"/images/card_strawberry.png", icon: "http://fillmurray.com/50/50"};
 var pie3 = {name:"Blueberry", card:"/images/card_blueberry.png", icon: "http://fillmurray.com/50/50"};
 var pie4 = {name:"Boysenberry", card:"/images/card_boysenberry.png", icon: "http://fillmurray.com/50/50"};
-var pie5 = {name:"Blackberry", card:"http://placehold.it/500x500/000088", icon: "http://fillmurray.com/50/50"};
-var pie6 = {name:"Bumbleberry", card:"http://placehold.it/500x500/ee7700", icon: "http://fillmurray.com/50/50"};
+var pie5 = {name:"Blackberry", card:"/images/card_blackberry.png", icon: "http://fillmurray.com/50/50"};
+var pie6 = {name:"Raspberry", card:"/images/card_raspberry.png", icon: "http://fillmurray.com/50/50"};
 
 // Build the full pie list
 var pieDeck = {pie1,pie2,pie3,pie4,pie5,pie6};

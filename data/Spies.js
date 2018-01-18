@@ -3,12 +3,12 @@ var randomInt = require('random-int');
 var deleteKey = require('key-del');
 
 // Build each spy
-var spy1 = {name:"Ned", card:"http://placehold.it/500x500/222222", icon: "http://fillmurray.com/50/50"};
-var spy2 = {name:"Ted", card:"http://placehold.it/500x500", icon: "http://fillmurray.com/50/50"};
-var spy3 = {name:"Red", card:"http://placehold.it/500x500/880000", icon: "http://fillmurray.com/50/50"};
-var spy4 = {name:"Fred", card:"http://placehold.it/500x500/008800", icon: "http://fillmurray.com/50/50"};
-var spy5 = {name:"Zed", card:"http://placehold.it/500x500/000088", icon: "http://fillmurray.com/50/50"};
-var spy6 = {name:"Bertha", card:"http://placehold.it/500x500/ee7700", icon: "http://fillmurray.com/50/50"};
+var spy1 = {name:"Ned", card:"/images/card_ned.png", icon: "http://fillmurray.com/50/50"};
+var spy2 = {name:"Ted", card:"/images/card_ted.png", icon: "http://fillmurray.com/50/50"};
+var spy3 = {name:"Red", card:"/images/card_red.png", icon: "http://fillmurray.com/50/50"};
+var spy4 = {name:"Fred", card:"/images/card_fred.png", icon: "http://fillmurray.com/50/50"};
+var spy5 = {name:"Zed", card:"/images/card_zed.png", icon: "http://fillmurray.com/50/50"};
+var spy6 = {name:"Bertha", card:"/images/card_bertha.png", icon: "http://fillmurray.com/50/50"};
 
 // Build the full spy list
 var spyDeck = {spy1,spy2,spy3,spy4,spy5,spy6};

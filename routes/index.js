@@ -79,12 +79,11 @@ router.get('/game', function(req, res, next) {
   var murderSpy = Object.freeze(murderInfo.spy());
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER ROOM IS " + murderInfo.room());
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
-  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
-  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDERER IS " + murderInfo.spy());
   var murderPieObject = {card: eval("Pies." + murderPie + ".card"), name: eval("Pies." + murderPie + ".name")};
   var murderSpyObject = {card: eval("Spies." + murderSpy + ".card"), name: eval("Spies." + murderSpy + ".name")};
-  res.render('game', {MurderInfo: murderInfo, murderPie: murderPieObject, murderSpy: murderSpyObject});
+  var murderRoomObject = {card: eval("Rooms." + murderRoom + ".card"), name: eval("Rooms." + murderRoom + ".name")};
+  res.render('game', {MurderInfo: murderInfo, murderPie: murderPieObject, murderSpy: murderSpyObject, murderRoom: murderRoomObject});
 });
 
 
