@@ -5,6 +5,8 @@ mongoose.connect('localhost:27017/test');
 var Schema = mongoose.Schema;
 var randomInt = require('random-int');
 
+var MurderInfo = require('../data/MurderGenerator');
+
 var murderDataSchema = new Schema({
   room: String,
   pie: String,
@@ -68,7 +70,11 @@ router.get('/choose', function(req, res, next) {
 });
 
 router.get('/game', function(req, res, next) {
-  res.render('game');
+  const murderTest = new MurderInfo.PickMurderThings();
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER ROOM IS " + murderTest.room());
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderTest.pie());
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDERER IS " + murderTest.spy());
+  res.render('game', {MurderInfo: murderTest});
 });
 
 

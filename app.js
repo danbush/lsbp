@@ -14,9 +14,11 @@ var app = express();
 var Rooms = require('./data/Rooms');
 var Pies = require('./data/Pies');
 var Spies = require('./data/Spies');
+var MurderInfo = require('./data/MurderGenerator');
 app.locals.Rooms = Rooms;
 app.locals.Pies = Pies;
 app.locals.Spies = Spies;
+
 
 // view engine setup
 app.engine('hbs', hbs({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/'}));
