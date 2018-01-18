@@ -73,17 +73,18 @@ router.get('/choose', function(req, res, next) {
 });
 
 router.get('/game', function(req, res, next) {
-  const murderTest = new MurderInfo.PickMurderThings();
-  var murderRoom = Object.freeze(murderTest.room());
-  var murderPie = Object.freeze(murderTest.pie());
-  var murderSpy = Object.freeze(murderTest.spy());
-  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER ROOM IS " + murderTest.room());
+  const murderInfo = new MurderInfo.PickMurderThings();
+  var murderRoom = Object.freeze(murderInfo.room());
+  var murderPie = Object.freeze(murderInfo.pie());
+  var murderSpy = Object.freeze(murderInfo.spy());
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER ROOM IS " + murderInfo.room());
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
-  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDERER IS " + murderTest.spy());
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDERER IS " + murderInfo.spy());
   var murderPieObject = {card: eval("Pies." + murderPie + ".card"), name: eval("Pies." + murderPie + ".name")};
-  res.render('game', {MurderInfo: murderTest, murderPie: murderPieObject, pieName: pieTest2});
+  var murderSpyObject = {card: eval("Spies." + murderSpy + ".card"), name: eval("Spies." + murderSpy + ".name")};
+  res.render('game', {MurderInfo: murderInfo, murderPie: murderPieObject, murderSpy: murderSpyObject});
 });
 
 

@@ -1,5 +1,25 @@
 /* Start Game UI */
 /* ~~~~~~~~~~~~~~~~~~ */
+/* Cards              */
+/* ~~~~~~~~~~~~~~~~~~ */
+section.cards {
+  position: absolute;
+  z-index: 5;
+  left: 65px;
+  bottom: 0;
+  padding: 20px;
+
+  background-color:rgba(0, 0, 0, .3) ;
+  img {
+    display: inline-block;
+    margin-right: 10px;
+    width: 80px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+/* ~~~~~~~~~~~~~~~~~~ */
 /* Spy Picker         */
 /* ~~~~~~~~~~~~~~~~~~ */
 section.spy-picker {
@@ -157,6 +177,7 @@ section#pie-picker-open {
 .notepad {
   display:block;
   position: absolute;
+  z-index: 10;
   bottom: 0;
   left: 0;
 
