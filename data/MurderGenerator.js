@@ -32,12 +32,29 @@ class PickMurderThings {
     theDeck += spyDeck;
     return murderSpy;
   }
-  // murderedDeck () {
-  //   // deck = {}
-  //   // deck += Rooms.roomDeck;
-  //   var murderRoom = this.room;
-  //   return murderRoom;
-  // }
+  murderedDeck (room,pie,spy) {
+    var deck = [];
+    var roomNumber = room.slice(-1) - 1;
+    var pieNumber = pie.slice(-1) - 1;
+    var spyNumber = spy.slice(-1)-1;
+    console.log("room number is " + roomNumber);
+    console.log("pie number is " + pieNumber);
+    // This number for some reason is always wrong, even though the other two are always right.
+    console.log("spy number is " + spyNumber);
+
+    deck = deck.concat(Rooms.roomDeck);
+    deck.splice(roomNumber,1);
+
+    var pieDeck = Pies.pieDeck;
+    pieDeck.splice(pieNumber,1);
+    deck = deck.concat(pieDeck);
+
+    var spyDeck = Spies.spyDeck;
+    spyDeck.splice(spyNumber,1);
+    deck = deck.concat(spyDeck);
+    
+    return deck;
+  }
 }
 
 exports.PickMurderThings = PickMurderThings;

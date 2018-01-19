@@ -73,11 +73,16 @@ router.get('/choose', function(req, res, next) {
 });
 
 router.get('/game', function(req, res, next) {
+  // Build a new instance of murder items
   const murderInfo = new MurderInfo.PickMurderThings();
   var murderRoom = Object.freeze(murderInfo.room());
   var murderPie = Object.freeze(murderInfo.pie());
   var murderSpy = Object.freeze(murderInfo.spy());
-  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER ROOM IS " + murderInfo.room());
+  var playDeck = Object.freeze(murderInfo.murderedDeck(murderRoom,murderPie,murderSpy));
+  
+  console.warn('\x1b[35m%s\x1b[35m',"Let's see if this deck works " + JSON.stringify(playDeck));
+
+  console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER ROOM IS " + murderRoom);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDER PIE IS " + murderPie);
   console.warn('\x1b[35m%s\x1b[35m',"YOOO! THE MURDERER IS " + murderInfo.spy());
   var murderPieObject = {card: eval("Pies." + murderPie + ".card"), name: eval("Pies." + murderPie + ".name")};
